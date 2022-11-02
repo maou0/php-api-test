@@ -15,7 +15,6 @@ docker exec -it laravel /bin/bash
 5. Запускаем внутри контейнера следующие команды
 ```
 composer install
-php artisan key:generate
 php artisan migrate
 
 ```
