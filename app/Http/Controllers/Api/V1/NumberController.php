@@ -3,15 +3,9 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
-use App\Jobs\DailyReport;
-use App\Mail\DailyReportMail;
 use App\Models\Number;
-use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Env;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class NumberController extends Controller
@@ -38,7 +32,7 @@ class NumberController extends Controller
         return new JsonResponse(
             [
                 'success' => true,
-                'message' => "Random number has been successfully generated!"
+                'message' => 'Random number has been successfully generated!',
             ], 200
         );
     }
@@ -57,7 +51,7 @@ class NumberController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param  Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

@@ -10,5 +10,6 @@ class Number extends Model
     use HasFactory;
 
     protected $table = 'numbers';
+
     protected $guarded = false;
 }

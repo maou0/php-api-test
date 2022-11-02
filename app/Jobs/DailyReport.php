@@ -35,7 +35,7 @@ class DailyReport implements ShouldQueue
     public function handle(): void
     {
         try {
-            $path = '/daily_reports/' . Carbon::today()->toDateString() . '_report.txt';
+            $path = '/daily_reports/'.Carbon::today()->toDateString().'_report.txt';
             Storage::disk('public')->put($path, '');
             $list = Number::query()
                 ->select('id', 'value')

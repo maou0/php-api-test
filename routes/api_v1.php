@@ -1,10 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\V1\Number\IndexController;
-use App\Http\Controllers\Api\V1\Number\ShowController;
-use App\Http\Controllers\Api\V1\Number\StoreController;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------

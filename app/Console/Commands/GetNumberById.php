@@ -29,8 +29,8 @@ class GetNumberById extends Command
     public function handle()
     {
         $id = $this->argument('id');
-        $response = Http::withHeaders(['Content-Type' => 'application/json'])->get('http://nginx:80/api/v1/numbers/'. $id);
-        $this->info('Requested number is: ' . $response['value']);
+        $response = Http::withHeaders(['Content-Type' => 'application/json'])->get('http://nginx:80/api/v1/numbers/'.$id);
+        $this->info('Requested number is: '.$response['value']);
 
         return Command::SUCCESS;
     }
